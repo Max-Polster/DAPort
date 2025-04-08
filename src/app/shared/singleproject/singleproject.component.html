@@ -1,19 +1,28 @@
 <section [ngClass]="imagePath">
-    <div>
-        <img [src]="imagePath" alt="" [ngClass]="className">
-        <div class="imageCover" (mouseover)="toggleHover()" (mouseout)="toggleHover()" [ngClass]="{'cover': isHover()}">
-           <div>
-            <app-buttons
-            [text]="'Project details'"
-            [color]="'white'"
-         
-            ></app-buttons>
-           </div>
-    
-        </div>
+  <div>
+    <img [src]="imagePath" alt="" [ngClass]="className" />
+    <div
+      class="imageCover"
+      (mouseover)="toggleHover()"
+      (mouseout)="toggleHover()"
+      [ngClass]="{ cover: isHover() }"
+    >
+      <div>
+        <app-buttons
+          [ngClass]="param"
+          [text]="'Project details'"
+          [color]="'white'"
+          (click)="openOverlay(param)"
+        ></app-buttons>
+      </div>
     </div>
+  </div>
 
-
-    <h2 [ngClass]="title">{{title}}</h2>
-    <p [ngClass]="text">{{text}}</p>
+  <h2 [ngClass]="title">{{ title }}</h2>
+  <p [ngClass]="text">{{ text }}</p>
 </section>
+
+<div class="overlay" *ngIf="isVisable">
+  <p>{{ param }}</p>
+  <button (click)="closeOverlay()">X</button>
+</div>
