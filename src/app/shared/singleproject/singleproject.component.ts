@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { ButtonsComponent } from '../buttons/buttons.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-singleproject',
   imports: [CommonModule, ButtonsComponent],
   templateUrl: './singleproject.component.html',
-  styleUrl: './singleproject.component.scss',
+  styleUrl: './singleproject.component.scss'
 })
 export class SingleprojectComponent {
   @Input() imagePath: string = '';
@@ -15,9 +16,9 @@ export class SingleprojectComponent {
   @Input() className: string = '';
   @Input() param: string = '';
 
-  hover = false;
-  isVisable = false;
+  constructor(private router: Router) {}
 
+  hover = false;
   toggleHover() {
     this.hover = !this.hover;
   }
@@ -26,13 +27,12 @@ export class SingleprojectComponent {
     return this.hover === true;
   }
 
-  openOverlay(param: string) {
-    console.log(param);
-    this.isVisable = true;
-    console.log(this.isVisable);
+  openOverlay(route:string) {
+
+      this.router.navigate([route]);
+
+   
+
   }
-  closeOverlay() {
-    this.isVisable = false;
-    console.log(this.isVisable);
-  }
+
 }

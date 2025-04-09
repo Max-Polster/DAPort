@@ -6,13 +6,15 @@ import { SingleprojectComponent } from '../../shared/singleproject/singleproject
   selector: 'app-projects',
   imports: [CommonModule, SingleprojectComponent],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss',
+  styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+ 
   hover = false;
 
   toggleHover() {
     this.hover = !this.hover;
+
   }
 
   isHover() {
