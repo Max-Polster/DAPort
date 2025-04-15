@@ -5,15 +5,14 @@ import { Component, Input } from '@angular/core';
   selector: 'app-buttons',
   imports: [CommonModule],
   templateUrl: './buttons.component.html',
-  styleUrl: './buttons.component.scss'
+  styleUrl: './buttons.component.scss',
 })
 export class ButtonsComponent {
   @Input() text: string = '';
   @Input() color: string = '';
   @Input() resp: string = '';
   @Input() hoverClass: string = '';
-  
- 
+  @Input() disabled: boolean = false;
 
   secondhover: boolean = false;
   changeActive() {

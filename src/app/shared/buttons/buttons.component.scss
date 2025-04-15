@@ -1,121 +1,139 @@
-
 button {
-    position: relative;
-    width: 145px;
-    height: 40px;
-    background-color: transparent;
-    border: solid;
-    border-radius: 100px;
-    border-width: 1px;
-    border-color: var(--white-font);
-    color: var(--white-font);
-    transition: all 0.2s ease-in-out;
-    opacity: 1;
+  position: relative;
+  width: 145px;
+  height: 40px;
+  background-color: transparent;
+  border: solid;
+  border-radius: 100px;
+  border-width: 1px;
+  border-color: var(--white-font);
+  color: var(--white-font);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 
-    >span {
-        font-size: 18px;
-    }
-
+  > span {
+    font-size: 18px;
+  }
 }
 
-
 .getinTouchButton {
-    background-color: #F8F9FA;
+  background-color: #f8f9fa;
+  &:active {
+    transform: scale(0.95);
+  }
 
-    >button {
-        background-color: #000000;
-    }
+  > button {
+    background-color: #000000;
+  }
 }
 
 .buttonBack {
-    position: relative;
+  position: relative;
 
-    width: 145px;
-    height: 40px;
-    border-radius: 100px;
+  width: 145px;
+  height: 40px;
+  border-radius: 100px;
 
-    >button {
-        position: absolute;
-        top: -5px;
-        left: -2px;
-    }
-
-    &:active {
-        transform: scale(0.95);
-    }
-
-
+  > button {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+  }
 }
 
 .slideButton {
-    top: 0 !important;
-    left: 0 !important;
-    background-color: #F87A55 !important;
-    
-
+  top: 0 !important;
+  left: 0 !important;
+  background-color: #f87a55 !important;
 }
 
 .projecthover {
-    top: 5px;
-    left: 5px;
+  top: 5px;
+  left: 5px;
 }
 
 .black {
-    background-color: #000000;
+  background-color: #000000;
+  &:active {
+    transform: scale(0.95);
+  }
 
-    >button {
-        background-color: #F8F9FA;
-        color: #000000;
-        border-color: #000000;
-    }
+  > button {
+    background-color: #f8f9fa;
+    color: #000000;
+    border-color: #000000;
+  }
 }
 
 .white {
+  background: transparent;
+  box-shadow: 5px 5px 0px 0px #f8f9fa;
 
-    background: transparent;
-    box-shadow: 5px 5px 0px 0px #F8F9FA;
+  > button {
+    background-color: #0000003c;
+    top: 0;
+    left: 0;
 
-    >button {
-        background-color: #0000003c ;
-        top: 0;
-        left: 0;
-
-        &:hover {
-            background-color: #000000;
-            top: 5px !important;
-            left: 5px !important;
-        }
-    
+    &:hover {
+      color: var(--white-font);
+      border-color: var(--white-font);
+      background-color: #000000;
+      top: 5px !important;
+      left: 5px !important;
     }
+  }
 }
 
+.grey {
+  background: transparent;
+  box-shadow: 5px 5px 0px 0px gray;
 
+  &:active {
+    transform: scale(0.95);
+  }
+  > button {
+    background-color: transparent;
+    color: grey;
+    border-color: gray;
+    box-shadow: 2px 2px 0px 0px gray;
 
-@media(pointer:coarse) {
+    &:hover {
+      color: gray;
+      border-color: gray;
+      top: 0;
+      left: 0;
 
+      &:hover {
+        background: transparent !important;
+        box-shadow: 5px 5px 0px 0px gray !important;
+        color: gray;
+      }
+      &:active {
+        transform: scale(1) !important;
+      }
+    }
+  }
+
+  @media (pointer: coarse) {
     .buttonBack button {
-        top: 0;
-        left: 0;
+      top: 0;
+      left: 0;
     }
 
     .getinTouchButton button {
-        background-color: #F87A55 !important;
+      background-color: #f87a55 !important;
     }
-}
+  }
 
-@media(max-width:650px){
-    button{
-        width: 110px;
-        >span{
-            font-size: 14px !important;
-        }
-     
-        
+  @media (max-width: 650px) {
+    button {
+      width: 110px;
+      > span {
+        font-size: 14px !important;
+      }
     }
-    .buttonBack{
-        width:110px;
-        
+    .buttonBack {
+      width: 110px;
     }
-  
-
+  }
 }

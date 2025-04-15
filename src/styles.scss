@@ -1,36 +1,36 @@
 @font-face {
-    font-display: swap;
-    font-family: 'Bricolage Grotesque';
-    src: url('/fonts/Bricolage_Grotesque,Nunito/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf');
+  font-display: swap;
+  font-family: "Bricolage Grotesque";
+  src: url("/fonts/Bricolage_Grotesque,Nunito/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf");
 }
 
-
 body {
-    font-family: 'Bricolage Grotesque';
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-
-
+  font-family: "Bricolage Grotesque";
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1,
 h2,
-h3, p {
-    margin: 0;
+h3,
+p {
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .d_none {
-    display: none;
+  display: none;
 }
 
 :root {
-
-    --main-color: #F7C518;
-    --white-font: #F8F9FA;
+  --main-color: #f7c518;
+  --white-font: #f8f9fa;
+  --logo-color: #3355ff;
+  --orange: #f87a55;
+  --red: #ff3a00;
 }
